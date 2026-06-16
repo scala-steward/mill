@@ -252,7 +252,7 @@ object Deps {
   object MavenInit {
     val mavenVersion = "3.9.9"
     val mavenEmbedder = mvn"org.apache.maven:maven-embedder:$mavenVersion"
-    val mavenResolverVersion = "1.9.22"
+    val mavenResolverVersion = "1.9.27"
     val mavenResolverConnectorBasic =
       mvn"org.apache.maven.resolver:maven-resolver-connector-basic:$mavenResolverVersion"
     val mavenResolverSupplier =
@@ -275,7 +275,7 @@ object Deps {
   val hiltGradlePlugin = mvn"com.google.dagger:hilt-android-gradle-plugin:2.56"
 
   val sbt_api = mvn"org.scala-sbt:sbt:1.10.10"
-  val mimaCore_api = mvn"com.typesafe::mima-core:1.1.5"
+  val mimaCore_api = mvn"com.typesafe::mima-core:1.1.6"
   val snakeyamlEngine = mvn"org.snakeyaml:snakeyaml-engine:3.0.1"
   val spotlessLibExtra = mvn"com.diffplug.spotless:spotless-lib-extra:3.3.1"
   // JGit 6.x series, used by spotlessLibExtra, works on Java 11
