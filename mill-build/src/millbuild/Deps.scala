@@ -31,7 +31,7 @@ object Deps {
   val testScala33Version = "3.3.7"
 
   object Scalajs_1 {
-    val scalaJsVersion = "1.21.0"
+    val scalaJsVersion = "1.22.0"
     val scalajsEnvJsdomNodejs =
       mvn"org.scala-js::scalajs-env-jsdom-nodejs:1.1.1".withDottyCompat(scalaVersion)
     val scalajsEnvExoegoJsdomNodejs =
@@ -112,7 +112,7 @@ object Deps {
   val bouncyCastlePgp = mvn"org.bouncycastle:bcpg-jdk18on:${bouncyCastleVersion}"
 
   val classgraph = mvn"io.github.classgraph:classgraph:4.8.184"
-  val coursierVersion = "2.1.25-M25"
+  val coursierVersion = "2.1.25-M26"
   val coursier = mvn"io.get-coursier::coursier:$coursierVersion".withDottyCompat(scalaVersion)
   val coursierArchiveCache =
     mvn"io.get-coursier::coursier-archive-cache:$coursierVersion".withDottyCompat(scalaVersion)
@@ -224,16 +224,16 @@ object Deps {
   // Using "native-terminal-no-ffm" rather than just "native-terminal", as the GraalVM releases currently
   // lacks support for FFM on Mac ARM. That should be fixed soon, see oracle/graal#8113.
   val nativeTerminal = mvn"io.github.alexarchambault.native-terminal:native-terminal-no-ffm:0.0.9.1"
-  val zinc = mvn"org.scala-sbt::zinc:2.0.0-M19"
+  val zinc = mvn"org.scala-sbt::zinc:2.0.0"
   // keep in sync with doc/antora/antory.yml
   val bsp4j = mvn"ch.epfl.scala:bsp4j:2.2.0-M2"
   // https://github.com/google/gson/releases/tag/gson-parent-2.13.2
   val gson = mvn"com.google.code.gson:gson:2.14.0"
   val fansi = mvn"com.lihaoyi::fansi:0.5.1"
-  val javaparser = mvn"com.github.javaparser:javaparser-core:3.28.1"
+  val javaparser = mvn"com.github.javaparser:javaparser-core:3.28.2"
   val jarjarabrams = mvn"com.eed3si9n.jarjarabrams::jarjar-abrams-core:1.16.0"
   val requests = mvn"com.lihaoyi::requests:0.9.3"
-  val logback = mvn"ch.qos.logback:logback-classic:1.5.33"
+  val logback = mvn"ch.qos.logback:logback-classic:1.5.34"
   val sonatypeCentralClient = mvn"com.lumidion::sonatype-central-client-requests:0.6.0"
   val kotlinVersion = "2.1.20"
   val kspVersion = "2.0.1"
@@ -245,14 +245,14 @@ object Deps {
   val kotlinStdlib = mvn"org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
   val groovyVersion_lowerBound = "4.0.28"
   val groovyCompiler_lowerBound = mvn"org.apache.groovy:groovy:$groovyVersion_lowerBound"
-  val groovyVersion = "5.0.3"
+  val groovyVersion = "5.0.6"
   val groovyCompiler_runtime = mvn"org.apache.groovy:groovy:$groovyVersion"
 
   /** Used for the `mill init` from a Maven project. */
   object MavenInit {
     val mavenVersion = "3.9.9"
     val mavenEmbedder = mvn"org.apache.maven:maven-embedder:$mavenVersion"
-    val mavenResolverVersion = "1.9.22"
+    val mavenResolverVersion = "1.9.27"
     val mavenResolverConnectorBasic =
       mvn"org.apache.maven.resolver:maven-resolver-connector-basic:$mavenResolverVersion"
     val mavenResolverSupplier =
@@ -275,7 +275,7 @@ object Deps {
   val hiltGradlePlugin = mvn"com.google.dagger:hilt-android-gradle-plugin:2.56"
 
   val sbt_api = mvn"org.scala-sbt:sbt:1.10.10"
-  val mimaCore_api = mvn"com.typesafe::mima-core:1.1.5"
+  val mimaCore_api = mvn"com.typesafe::mima-core:1.1.6"
   val snakeyamlEngine = mvn"org.snakeyaml:snakeyaml-engine:3.0.1"
   val spotlessLibExtra = mvn"com.diffplug.spotless:spotless-lib-extra:3.3.1"
   // JGit 6.x series, used by spotlessLibExtra, works on Java 11
@@ -336,7 +336,7 @@ object Deps {
 
   /** Used to manage transitive versions. */
   lazy val transitiveDeps = Seq(
-    mvn"org.apache.ant:ant:1.10.15",
+    mvn"org.apache.ant:ant:1.10.17",
     Deps.commonsIo,
     Deps.gson,
     mvn"com.google.protobuf:protobuf-java:4.33.5",
